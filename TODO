@@ -1,0 +1,6 @@
+
+ o remove Read-and-delete-me
+   - but maybe display its text?
+   - or maybe include a directory todo/ which is in .Rbuildignore ?
+
+ o [done] fix manual page 
