@@ -13,12 +13,11 @@
 
   This package helps with this issue. No more, no less.
 }
-\details{
-}
 \author{
   Dirk Eddelbuettel wrote the package and maintains it.
 }
 \keyword{package}
 \seealso{
-  \code{\link{package.skeleton()}}, the \sQuote{Writing R Extensions} manual.
+  \code{\link[utils:package.skeleton]{package.skeleton}},
+  the \sQuote{Writing R Extensions} manual.
 }
