@@ -1,12 +1,14 @@
 Package: pkgKitten
 Type: Package
-Title: What the package does in one short line
+Title: Create simple packages which do not upset R CMD check
 Version: 0.1.0
-Date: 2014-04-01
-Author: Your Name
-Maintainer: Your Name <your@email.com>
-Description: More arbout what the package does and what features
- distinguish from other packages. Multiple sentences are fine,
- as are keywords from its application domain.
+Date: 2014-05-22
+Author: Dirk Eddelbuettel
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Description: This package provides a function kitten() which 
+ create cute little packages which pass R CMD check. This
+ sets it apart from package.skeleton() which it calls, and which 
+ leaves imperfect files behind. As this is not exactly helpful
+ for beginners, kitten() offers an alternative.
 License: GPL (>= 2)
 
