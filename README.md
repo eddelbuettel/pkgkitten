@@ -1,6 +1,8 @@
-## pkgKitten: Create packages that do not upset R CMD check
+## pkgKitten: Create packages that purr
 
 [![Build Status](https://travis-ci.org/eddelbuettel/pkgkitten.png)](https://travis-ci.org/eddelbuettel/pkgkitten)
+
+![a kitten](http://2.bp.blogspot.com/-rUsj-zdsAls/UY81UzuYHsI/AAAAAAAAAJA/QMiiNxYuvdI/s1600/burmilla-kitten.png)
 
 The base R function `package.skeleton()` is very useful for creating new
 packages for R. It is also very upsetting as it has been producing the same
