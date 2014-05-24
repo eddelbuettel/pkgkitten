@@ -61,7 +61,7 @@ kitten <- function(name = "anRpackage",
         stop(sprintf("error while calling `package.skeleton` : %s", conditionMessage(e)))
     })
     
-    message("\nAdding pkgKitten ovverides\n\n")
+    message("\nAdding pkgKitten ovverides.")
 
     root <- file.path(path, name)    ## now pick things up from here
     DESCRIPTION <- file.path(root, "DESCRIPTION")
@@ -89,9 +89,13 @@ kitten <- function(name = "anRpackage",
     unlink(file.path(root, "R"  , "kitten.fake.fun.R"))
     unlink(file.path(root, "man", "kitten.fake.fun.Rd"))
     unlink(file.path(root, "Read-and-delete-me"))
+    message("Deleted 'Read-and-delete-me'.")
+    message("Done.\n")
 
-    message("Done. Please read the 'Writing R Extensions' manual for all pertinent details.")
-    message("And run 'R CMD check'. And think of those kittens.")
+    message("Consider readingg the documentation for all the packaging details.")
+    message("A good start is the 'Writing R Extensions' manual.\n")
+
+    message("And run 'R CMD check'. Run it frequently. And think of those kittens.\n")
     
     invisible(NULL)
 }
