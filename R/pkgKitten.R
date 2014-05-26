@@ -92,7 +92,7 @@ kitten <- function(name = "anRpackage",
     message("Deleted 'Read-and-delete-me'.")
     message("Done.\n")
 
-    message("Consider readingg the documentation for all the packaging details.")
+    message("Consider reading the documentation for all the packaging details.")
     message("A good start is the 'Writing R Extensions' manual.\n")
 
     message("And run 'R CMD check'. Run it frequently. And think of those kittens.\n")
