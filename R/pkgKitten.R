@@ -52,6 +52,11 @@ kitten <- function(name = "anRpackage",
     call <- match.call()                	# how were we called
     call[[1]] <- as.name("package.skeleton")    # run as if package.skeleton() was called
     env <- parent.frame(1)                      # access to what is in the environment
+
+    if (file.exists(file.path(path, name))) {
+        stop("Directory '", name, "' already exists. Aborting.", call.=FALSE)
+    }
+        
     assign("kitten.fake.fun", function() {}, envir = env)
     
     call <- call[ c(1L, which(names(call) %in% names(formals(package.skeleton)))) ]
@@ -75,7 +80,15 @@ kitten <- function(name = "anRpackage",
     
     helptgt <- file.path(root, "man", sprintf( "%s-package.Rd", name))
     helpsrc <- system.file("replacements", "manual-page-stub.Rd", package="pkgKitten")
-    file.copy(helpsrc, helptgt, overwrite=TRUE)
+    ## update the package description help page
+    if (file.exists(helpsrc)) {
+        lines <- readLines(helpsrc)
+        lines <- gsub("__placeholder__", name, lines, fixed = TRUE)
+        lines <- gsub("Who to complain to <yourfault@somewhere.net>",
+                      sprintf( "%s <%s>", maintainer, email),
+                      lines, fixed = TRUE)
+        writeLines(lines, helptgt)
+    }
     
     rtgt <- file.path(root, "R", "hello.R")
     rsrc <- system.file("replacements", "hello.R", package="pkgKitten")

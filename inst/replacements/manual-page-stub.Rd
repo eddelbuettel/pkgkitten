@@ -1,24 +1,16 @@
-\name{pkgKitten-package}
-\alias{pkgKitten-package}
-\alias{pkgKitten}
+\name{__placeholder__-package}
+\alias{__placeholder__-package}
+\alias{__placeholder__}
 \docType{package}
 \title{
   A short title line describing what the package does
 }
 \description{
-  A more detailed description of that the package. A length
+  A more detailed description of what the package does. A length
   of about one to five lines is recommended.
 }
 \details{
-  A table such as what follows is recommended but not required.
-\tabular{ll}{
-Package: \tab pkgKitten\cr
-Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2014-04-01\cr
-License: \tab What license is it under?\cr
-}
-  This should be followed by a more detailed overview of how to use the
+  This section should provide a more detailed overview of how to use the
   package, including the most important functions.
 }
 \author{
