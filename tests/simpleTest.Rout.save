@@ -18,9 +18,9 @@ Type 'q()' to quit R.
 > 
 > library(pkgKitten)
 > 
-> setwd(tempdir())
+> setwd(tempdir())                        # which gets deleted anyway
 > 
-> kitten("simpleTest")
+> kitten("simpleTest")                    # unfortunately testing fails :-/
 Creating directories ...
 Creating DESCRIPTION ...
 Creating NAMESPACE ...
@@ -39,23 +39,15 @@ A good start is the 'Writing R Extensions' manual.
 
 And run 'R CMD check'. Run it frequently. And think of those kittens.
 
-> system("R CMD build simpleTest")
-Error in file(filename, "r", encoding = encoding) : 
-  cannot open the connection
-Calls: local ... eval.parent -> eval -> eval -> eval -> eval -> source -> file
-In addition: Warning message:
-In file(filename, "r", encoding = encoding) :
-  cannot open file 'startup.Rs': No such file or directory
-Execution halted
-> system("R CMD check --no-manual --no-vignettes simpleTest_1.0.tar.gz")
-Error in file(filename, "r", encoding = encoding) : 
-  cannot open the connection
-Calls: local ... eval.parent -> eval -> eval -> eval -> eval -> source -> file
-In addition: Warning message:
-In file(filename, "r", encoding = encoding) :
-  cannot open file 'startup.Rs': No such file or directory
-Execution halted
+> 
+> ## R <- shQuote(file.path(R.home(component="bin"), "R"))
+> ## #system(paste(R, "--version"))
+> ## #system(paste(R,  "CMD build", pkgpath))
+> ## #system(paste(R,  "CMD check --no-manual --no-vignettes simpleTest_1.0.tar.gz"))
+> 
+> 
+> 
 > 
 > proc.time()
    user  system elapsed 
-  0.360   0.540   0.381 
+  0.284   0.448   0.266 
