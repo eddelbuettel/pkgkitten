@@ -40,14 +40,70 @@ A good start is the 'Writing R Extensions' manual.
 And run 'R CMD check'. Run it frequently. And think of those kittens.
 
 > 
-> ## R <- shQuote(file.path(R.home(component="bin"), "R"))
-> ## #system(paste(R, "--version"))
-> ## #system(paste(R,  "CMD build", pkgpath))
-> ## #system(paste(R,  "CMD check --no-manual --no-vignettes simpleTest_1.0.tar.gz"))
+> R <- shQuote(file.path(R.home(component="bin"), "R"))
+> 
+> Sys.setenv("R_TESTS"="")                # thanks for the tip, Hadley
+> system(paste(R, "CMD build simpleTest"))
+* checking for file ‘simpleTest/DESCRIPTION’ ... OK
+* preparing ‘simpleTest’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files
+* checking for empty or unneeded directories
+* building ‘simpleTest_1.0.tar.gz’
+
+> 
+> system(paste(R, "CMD check --no-manual --no-build-vignettes simpleTest_1.0.tar.gz"))
+* using log directory ‘/tmp/Rtmp89ctUd/simpleTest.Rcheck’
+* using R version 3.1.0 (2014-04-10)
+* using platform: i686-pc-linux-gnu (32-bit)
+* using session charset: UTF-8
+* using option ‘--no-build-vignettes’
+* checking for file ‘simpleTest/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘simpleTest’ version ‘1.0’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘simpleTest’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... OK
+
 > 
 > 
 > 
 > 
 > proc.time()
    user  system elapsed 
-  0.284   0.448   0.266 
+  7.996  12.820   8.783 
