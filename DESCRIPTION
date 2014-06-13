@@ -2,7 +2,7 @@ Package: pkgKitten
 Type: Package
 Title: Create simple packages which do not upset R CMD check
 Version: 0.1.0
-Date: 2014-05-22
+Date: 2014-06-13
 Author: Dirk Eddelbuettel
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: This package provides a function kitten() which 
