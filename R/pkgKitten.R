@@ -18,7 +18,7 @@
 ##  along with pkgKitten.  If not, see <http://www.gnu.org/licenses/>.
 
 
-##' The \code{kitten} function create an (almost) empty example
+##' The \code{kitten} function creates an (almost) empty example
 ##' package.
 ##' 
 ##' The \code{kitten} function can be used to initialize a simple
@@ -77,18 +77,8 @@ kitten <- function(name = "anRpackage",
         x[, "License"] <- license
         write.dcf(x, file = DESCRIPTION)
     }
-    
-    helptgt <- file.path(root, "man", sprintf( "%s-package.Rd", name))
-    helpsrc <- system.file("replacements", "manual-page-stub.Rd", package="pkgKitten")
-    ## update the package description help page
-    if (file.exists(helpsrc)) {
-        lines <- readLines(helpsrc)
-        lines <- gsub("__placeholder__", name, lines, fixed = TRUE)
-        lines <- gsub("Who to complain to <yourfault@somewhere.net>",
-                      sprintf( "%s <%s>", maintainer, email),
-                      lines, fixed = TRUE)
-        writeLines(lines, helptgt)
-    }
+
+    playWithPerPackageHelpPage(path, name, maintainer, email)
     
     rtgt <- file.path(root, "R", "hello.R")
     rsrc <- system.file("replacements", "hello.R", package="pkgKitten")
@@ -113,3 +103,41 @@ kitten <- function(name = "anRpackage",
     invisible(NULL)
 }
 
+##' The \code{playWithPerPackageHelpPage} function creates an basic
+##' package help page.
+##' 
+##' The \code{playWithPerPackageHelpPage} function can be used to
+##' create a simple help page for a package.
+##'
+##' It has been split off from the \code{kitten} function so that it
+##' can be called from other packages. As such, it is also exported
+##' from \pkg{pkgKitten}. 
+##' 
+##' @title Create a very simple package help page 
+##' @param name The name of the package to be created, defaults to \dQuote{anPackage}
+##' @param path The path to the location where the package is to be
+##' created, defaults to the current directory.
+##' @param maintainer The name of the maintainer, defaults to
+##' \dQuote{Your Name} or \code{author} if the latter is given.
+##' @param email The maintainer email address.
+##' @return Nothing is returned as the function is invoked for its
+##' side effect of creating a new package.
+##' @author Dirk Eddelbuettel
+playWithPerPackageHelpPage <- function(name = "anRpackage",
+                                       path = ".",
+                                       maintainer = "Your Name",
+                                       email = "your@mail.com") {
+    root <- file.path(path, name)    
+    helptgt <- file.path(root, "man", sprintf( "%s-package.Rd", name))
+    helpsrc <- system.file("replacements", "manual-page-stub.Rd", package="pkgKitten")
+    ## update the package description help page
+    if (file.exists(helpsrc)) {
+        lines <- readLines(helpsrc)
+        lines <- gsub("__placeholder__", name, lines, fixed = TRUE)
+        lines <- gsub("Who to complain to <yourfault@somewhere.net>",
+                      sprintf( "%s <%s>", maintainer, email),
+                      lines, fixed = TRUE)
+        writeLines(lines, helptgt)
+    }
+    invisible(NULL)
+}
