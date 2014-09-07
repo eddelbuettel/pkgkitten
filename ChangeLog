@@ -2,6 +2,8 @@
 
 	* R/pkgKitten.R: New function playWithPerPackageHelpPage() to create
 	a basic per-package manual page which purrs
+	* man/playWithPerPackageHelpPage.Rd: Documentation for new function
+	* NAMESPACE: Export new function
 
 2014-06-13  Dirk Eddelbuettel  <edd@debian.org>
 
