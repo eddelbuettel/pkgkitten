@@ -1,14 +1,14 @@
 Package: pkgKitten
 Type: Package
-Title: Create simple packages which do not upset R CMD check
+Title: Create Simple Packages Which Do Not Upset R CMD check
 Version: 0.1.1
-Date: 2014-09-09
+Date: 2014-09-10
 Author: Dirk Eddelbuettel
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
-Description: This package provides a function kitten() which 
- create cute little packages which pass R CMD check. This
- sets it apart from package.skeleton() which it calls, and which 
- leaves imperfect files behind. As this is not exactly helpful
- for beginners, kitten() offers an alternative.
+Description: Provides a function kitten() which create cute little 
+ packages which pass R CMD check. This sets it apart from 
+ package.skeleton() which it calls, and which leaves imperfect files 
+ behind. As this is not exactly helpful for beginners, kitten() offers 
+ an alternative.
 License: GPL (>= 2)
 
