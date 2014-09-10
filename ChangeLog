@@ -1,3 +1,9 @@
+2014-09-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Version 0.1.1
+
+	* inst/NEWS.Rd: Added
+
 2014-09-07  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/pkgKitten.R: New function playWithPerPackageHelpPage() to create
