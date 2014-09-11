@@ -1,3 +1,9 @@
+2014-09-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Version 0.1.2
+
+	* R/pkgKitten.R (kitten): Correctly invoke new function
+
 2014-09-09  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION: Version 0.1.1
