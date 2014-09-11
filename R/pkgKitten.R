@@ -78,7 +78,7 @@ kitten <- function(name = "anRpackage",
         write.dcf(x, file = DESCRIPTION)
     }
 
-    playWithPerPackageHelpPage(path, name, maintainer, email)
+    playWithPerPackageHelpPage(name, path, maintainer, email)
     
     rtgt <- file.path(root, "R", "hello.R")
     rsrc <- system.file("replacements", "hello.R", package="pkgKitten")
