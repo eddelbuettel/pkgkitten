@@ -2,7 +2,7 @@
 \title{News for Package \pkg{pkgKitten}}
 \newcommand{\cpkg}{\href{http://CRAN.R-project.org/package=#1}{\pkg{#1}}}
 
-\section{Changes in version 0.1.2 (2014-09-10)}{
+\section{Changes in version 0.1.2 (2014-09-11)}{
   \itemize{
     \item Brown-bag fix of calling the new helper function with then
     correct order of arguments.
