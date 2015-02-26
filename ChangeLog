@@ -1,3 +1,7 @@
+2015-02-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml (language): Using new native R support at Travis
+
 2014-09-11  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION: Version 0.1.2
