@@ -1,6 +1,8 @@
 2015-02-26  Dirk Eddelbuettel  <edd@debian.org>
 
-	* .travis.yml (language): Using new native R support at Travis
+	* .travis.yml (language): Using new native R support at Travis -- and
+	reverted after realizing it leads to several additional minutes of
+	forced installation of things we do not need
 
 2014-09-11  Dirk Eddelbuettel  <edd@debian.org>
 
