@@ -66,7 +66,7 @@ kitten <- function(name = "anRpackage",
         stop(sprintf("error while calling `package.skeleton` : %s", conditionMessage(e)))
     })
     
-    message("\nAdding pkgKitten overides.")
+    message("\nAdding pkgKitten overrides.")
 
     root <- file.path(path, name)    ## now pick things up from here
     DESCRIPTION <- file.path(root, "DESCRIPTION")
