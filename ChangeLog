@@ -1,3 +1,16 @@
+2015-06-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pkgKitten.R (kitten): Use email and name gathering functions from
+	package 'whoami' (if available) in case email and name were not
+	given; also rewrite Title: and Description: in a form that actually
+	passes R CMD check --as-cran
+
+	* man/kitten.Rd: Updated accordingly
+
+	* DESCRIPTION (Suggests): Add whoami
+
+	* .travis.yml (install): Add installation of whomai
+
 2015-02-26  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .travis.yml (language): Using new native R support at Travis -- and

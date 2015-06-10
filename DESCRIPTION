@@ -1,8 +1,8 @@
 Package: pkgKitten
 Type: Package
-Title: Create Simple Packages Which Do Not Upset R CMD check
-Version: 0.1.2
-Date: 2014-09-11
+Title: Create Simple Packages Which Do not Upset R Package Checks
+Version: 0.1.2.1
+Date: 2015-06-09
 Author: Dirk Eddelbuettel
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: Provides a function kitten() which creates cute little 
@@ -11,4 +11,5 @@ Description: Provides a function kitten() which creates cute little
  behind. As this is not exactly helpful for beginners, kitten() offers 
  an alternative.
 License: GPL (>= 2)
+Suggests: whoami
 

@@ -1,6 +1,6 @@
 ##  pkgKitten -- A saner way to create packages to build upon
 ##
-##  Copyright (C) 2014 Dirk Eddelbuettel <edd@debian.org>
+##  Copyright (C) 2014 - 2015  Dirk Eddelbuettel <edd@debian.org>
 ##
 ##  This file is part of pkgKitten
 ##
@@ -34,21 +34,28 @@
 ##' @param name The name of the package to be created, defaults to \dQuote{anPackage}
 ##' @param path The path to the location where the package is to be
 ##' created, defaults to the current directory.
-##' @param author The name of the author, defaults to \dQuote{Your Name}.
-##' @param maintainer The name of the maintainer, defaults to
-##' \dQuote{Your Name} or \code{author} if the latter is given.
-##' @param email The maintainer email address.
+##' @param author The name of the author, defaults to the result of
+##' \code{\link[whoami]{fullname}}.
+##' @param maintainer The name of the maintainer, also defaults to
+##' \code{\link[whoami]{fullname}} or \code{author} if the latter is given.
+##' @param email The maintainer email address, defaults to
+##' \code{\link[whoami]{email_address}}.
 ##' @param license The license of the new package, default to \dQuote{GPL-2}.
 ##' @return Nothing is returned as the function is invoked for its
 ##' side effect of creating a new package.
 ##' @author Dirk Eddelbuettel
 kitten <- function(name = "anRpackage",
                    path = ".",
-                   author = "Your Name",
-                   maintainer = if (missing(author)) "Your Name" else author,
-                   email = "your@email.com",
+                   author, # = fullname(),         # from 'whoami', wasL "Your Name",
+                   maintainer, # = if (missing(author)) fullname() else author,
+                   email, # = email_address(),     # from 'whomai', was: "your@email.com",
                    license = "GPL (>= 2)") {
-  
+
+    haswhoami <- requireNamespace("whoami", quietly=TRUE)
+    if (missing(author)) author <- ifelse(haswhoami, whoami::fullname(), "Your Name")
+    if (missing(maintainer)) maintainer <- author
+    if (missing(email)) email <- ifelse(haswhoami, whoami::email_address(), "your@email.com")
+    
     call <- match.call()                	# how were we called
     call[[1]] <- as.name("package.skeleton")    # run as if package.skeleton() was called
     env <- parent.frame(1)                      # access to what is in the environment
@@ -75,6 +82,11 @@ kitten <- function(name = "anRpackage",
         x[, "Author"] <- author
         x[, "Maintainer"] <- sprintf("%s <%s>", maintainer, email)
         x[, "License"] <- license
+        x[, "Title"] <- "What the Package Does Using Title Case"
+        x[, "Description"] <- paste0("More details about what the package does. ",
+                                     "See <http://http://cran.r-project.org/doc/manuals/",
+                                     "r-release/R-exts.html#The-DESCRIPTION-file> for ",
+                                     "details on how to write this part.")
         write.dcf(x, file = DESCRIPTION)
     }
 
