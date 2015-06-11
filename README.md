@@ -1,6 +1,6 @@
-## pkgKitten: Create packages that purr
+## pkgKitten [![Build Status](https://travis-ci.org/eddelbuettel/pkgkitten.svg)](https://travis-ci.org/eddelbuettel/pkgkitten) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/pkgKitten)](http://cran.rstudio.com/package=pkgKitten) [![Downloads](http://cranlogs.r-pkg.org/badges/pkgKitten?color=brightgreen)](http://www.r-pkg.org/pkg/pkgKitten)
 
-[![Build Status](https://travis-ci.org/eddelbuettel/pkgkitten.png)](https://travis-ci.org/eddelbuettel/pkgkitten)
+Create packages that purr
 
 ![a kitten](http://2.bp.blogspot.com/-rUsj-zdsAls/UY81UzuYHsI/AAAAAAAAAJA/QMiiNxYuvdI/s1600/burmilla-kitten.png)
 
