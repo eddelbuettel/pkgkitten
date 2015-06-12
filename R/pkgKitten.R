@@ -52,9 +52,12 @@ kitten <- function(name = "anRpackage",
                    license = "GPL (>= 2)") {
 
     haswhoami <- requireNamespace("whoami", quietly=TRUE)
-    if (missing(author)) author <- ifelse(haswhoami, whoami::fullname(), "Your Name")
-    if (missing(maintainer)) maintainer <- author
-    if (missing(email)) email <- ifelse(haswhoami, whoami::email_address(), "your@email.com")
+    if (missing(author))
+        author <- if (haswhoami) whoami::fullname("Your Name") else "Your Name"
+    if (missing(maintainer))
+        maintainer <- author
+    if (missing(email))
+        email <- if (haswhoami) whoami::email_address("your@email.com") else "your@email.com"
     
     call <- match.call()                	# how were we called
     call[[1]] <- as.name("package.skeleton")    # run as if package.skeleton() was called

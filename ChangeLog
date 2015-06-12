@@ -1,3 +1,10 @@
+2015-06-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Suggests): Versioned Suggests: on whomai (>= 1.1.0)
+
+	* R/pkgKitten.R (kitten): Use default value with email and name
+	gathering functions (now offered by whoami 1.1.0 or later)
+
 2015-06-09  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/pkgKitten.R (kitten): Use email and name gathering functions from

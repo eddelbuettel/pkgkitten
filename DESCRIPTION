@@ -11,5 +11,5 @@ Description: Provides a function kitten() which creates cute little
  behind. As this is not exactly helpful for beginners, kitten() offers 
  an alternative.
 License: GPL (>= 2)
-Suggests: whoami
+Suggests: whoami (>= 1.1.0)
 
