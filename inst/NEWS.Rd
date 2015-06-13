@@ -7,7 +7,7 @@
     \item The fields Title: and Description: in the file
     \code{DESCRIPTION} file are now updated such that they actually 
     pass \code{R CMD check} on current versions of R.
-    \item If installed, the \cpkg{whomai} package (version 1.1.0 or
+    \item If installed, the \cpkg{whoami} package (version 1.1.0 or
     later) is now used to discover the username and email in the
   \code{DESCRIPTION} file. 
   } 
