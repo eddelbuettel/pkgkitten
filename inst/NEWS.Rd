@@ -2,9 +2,20 @@
 \title{News for Package \pkg{pkgKitten}}
 \newcommand{\cpkg}{\href{http://CRAN.R-project.org/package=#1}{\pkg{#1}}}
 
+\section{Changes in version 0.1.3 (2015-06-12)}{
+  \itemize{
+    \item The fields Title: and Description: in the file
+    \code{DESCRIPTION} file are now updated such that they actually 
+    pass \code{R CMD check} on current versions of R.
+    \item If installed, the \cpkg{whomai} package (version 1.1.0 or
+    later) is now used to discover the username and email in the
+  \code{DESCRIPTION} file. 
+  } 
+}
+
 \section{Changes in version 0.1.2 (2014-09-11)}{
   \itemize{
-    \item Brown-bag fix of calling the new helper function with then
+    \item Brown-bag fix of calling the new helper function with the
     correct order of arguments.
   } 
 }

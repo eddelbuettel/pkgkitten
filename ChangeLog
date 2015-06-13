@@ -1,3 +1,7 @@
+2015-06-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Version 0.1.3
+
 2015-06-11  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Suggests): Versioned Suggests: on whomai (>= 1.1.0)

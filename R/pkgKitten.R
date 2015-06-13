@@ -35,12 +35,12 @@
 ##' @param path The path to the location where the package is to be
 ##' created, defaults to the current directory.
 ##' @param author The name of the author, defaults to the result of
-##' \code{\link[whoami]{fullname}}.
+##' \code{\link[whoami]{fullname}} (or \dQuote{Your Name} as fallback).
 ##' @param maintainer The name of the maintainer, also defaults to
 ##' \code{\link[whoami]{fullname}} or \code{author} if the latter is given.
 ##' @param email The maintainer email address, defaults to
-##' \code{\link[whoami]{email_address}}.
-##' @param license The license of the new package, default to \dQuote{GPL-2}.
+##' \code{\link[whoami]{email_address}} (or \dQuote{your@email.com} as fallback).
+##' @param license The license of the new package, defaults to \dQuote{GPL-2}.
 ##' @return Nothing is returned as the function is invoked for its
 ##' side effect of creating a new package.
 ##' @author Dirk Eddelbuettel
