@@ -87,7 +87,7 @@ kitten <- function(name = "anRpackage",
         x[, "License"] <- license
         x[, "Title"] <- "What the Package Does Using Title Case"
         x[, "Description"] <- paste0("More details about what the package does. ",
-                                     "See <http://http://cran.r-project.org/doc/manuals/",
+                                     "See <http://cran.r-project.org/doc/manuals/",
                                      "r-release/R-exts.html#The-DESCRIPTION-file> for ",
                                      "details on how to write this part.")
         write.dcf(x, file = DESCRIPTION)
