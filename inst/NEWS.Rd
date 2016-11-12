@@ -1,15 +1,23 @@
 \name{NEWS}
 \title{News for Package \pkg{pkgKitten}}
-\newcommand{\cpkg}{\href{http://CRAN.R-project.org/package=#1}{\pkg{#1}}}
+\newcommand{\ghpr}{\href{https://github.com/RcppCore/RcppArmadillo/pull/#1}{##1}}
+\newcommand{\ghit}{\href{https://github.com/RcppCore/RcppArmadillo/issues/#1}{##1}}
+
+\section{Changes in version 0.1.4 (2016-11-xx)}{
+  \itemize{
+    \item Utilize newer R macros in package-default manual page.
+    \item Repair a link to Wrting R Extensions (PR \ghpr{7} by Josh O'Brien)
+  }
+}
 
 \section{Changes in version 0.1.3 (2015-06-12)}{
   \itemize{
     \item The fields Title: and Description: in the file
     \code{DESCRIPTION} file are now updated such that they actually 
     pass \code{R CMD check} on current versions of R.
-    \item If installed, the \cpkg{whoami} package (version 1.1.0 or
+    \item If installed, the \CRANpkg{whoami} package (version 1.1.0 or
     later) is now used to discover the username and email in the
-  \code{DESCRIPTION} file. 
+    \code{DESCRIPTION} file. 
   } 
 }
 

@@ -1,3 +1,11 @@
+2016-11-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/replacements/manual-page-stub.Rd: Updated making use of the
+	various macros defined in ${RHOME}/share/Rd/macros/system.Rd and
+	described Section 2.13 of Writing R Extensions
+
+	* NAMESPACE: Added explicit import for package.skeleton
+
 2015-06-13  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION: Version 0.1.3
