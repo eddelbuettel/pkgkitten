@@ -1,9 +1,9 @@
 \name{NEWS}
 \title{News for Package \pkg{pkgKitten}}
-\newcommand{\ghpr}{\href{https://github.com/RcppCore/RcppArmadillo/pull/#1}{##1}}
-\newcommand{\ghit}{\href{https://github.com/RcppCore/RcppArmadillo/issues/#1}{##1}}
+\newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pkgkitten/pull/#1}{##1}}
+\newcommand{\ghit}{\href{https://github.com/eddelbuettel/pkgkitten/issues/#1}{##1}}
 
-\section{Changes in version 0.1.4 (2016-11-xx)}{
+\section{Changes in version 0.1.4 (2016-11-13)}{
   \itemize{
     \item Utilize newer R macros in package-default manual page.
     \item Repair a link to Wrting R Extensions (PR \ghpr{7} by Josh O'Brien)
