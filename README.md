@@ -1,4 +1,4 @@
-## pkgKitten [![Build Status](https://travis-ci.org/eddelbuettel/pkgkitten.svg)](https://travis-ci.org/eddelbuettel/pkgkitten) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/pkgKitten)](http://cran.rstudio.com/package=pkgKitten) [![Downloads](http://cranlogs.r-pkg.org/badges/pkgKitten?color=brightgreen)](http://www.r-pkg.org/pkg/pkgKitten)
+## pkgKitten [![Build Status](https://travis-ci.org/eddelbuettel/pkgkitten.svg)](https://travis-ci.org/eddelbuettel/pkgkitten) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/pkgKitten)](https://cran.r-project.org.com/package=pkgKitten) [![Downloads](http://cranlogs.r-pkg.org/badges/pkgKitten?color=brightgreen)](http://www.r-pkg.org/pkg/pkgKitten)
 
 Create packages that purr
 
@@ -14,11 +14,20 @@ behind which does not upset `R CMD check`.
 
 So just think of the kittens.
 
-## Author
+### Installation
+
+The package is on [CRAN](https://cran.r-project.org) and can be installed
+via a standard
+
+```r
+install.packages("pkgKitten")
+```
+
+### Author
 
 Dirk Eddelbuettel
 
-## License
+### License
 
 GPL (>= 2)
 

@@ -2,6 +2,8 @@
 
 	* DESCRIPTION (Version, Date): Release 0.1.4
 
+	* README.md: Canonical URL, added Installation note, minor edits
+
 2016-11-12  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/replacements/manual-page-stub.Rd: Updated making use of the
