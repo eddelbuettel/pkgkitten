@@ -1,3 +1,8 @@
+2017-10-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pkgKitten.R (kitten): Copy in .gitignore if none present
+	* inst/skel/R.gitignore: Added, courtesy of github/gitignore repo
+
 2017-08-26  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .travis.yml: Update to using new.sh from r-travis

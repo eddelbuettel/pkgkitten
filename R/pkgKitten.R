@@ -1,6 +1,6 @@
 ##  pkgKitten -- A saner way to create packages to build upon
 ##
-##  Copyright (C) 2014 - 2015  Dirk Eddelbuettel <edd@debian.org>
+##  Copyright (C) 2014 - 2017  Dirk Eddelbuettel <edd@debian.org>
 ##
 ##  This file is part of pkgKitten
 ##
@@ -20,7 +20,7 @@
 
 ##' The \code{kitten} function creates an (almost) empty example
 ##' package.
-##' 
+##'
 ##' The \code{kitten} function can be used to initialize a simple
 ##' package.  It is created with the minimal number of files. What
 ##' distinguished it from the function \code{package.skeleton()} in
@@ -30,7 +30,7 @@
 ##' Because every time you create a new package which does \emph{not}
 ##' pass \code{R CMD check}, a kitten experiences an existential
 ##' trauma. Just think about the kittens.
-##' @title Create a very simple package 
+##' @title Create a very simple package
 ##' @param name The name of the package to be created, defaults to \dQuote{anPackage}
 ##' @param path The path to the location where the package is to be
 ##' created, defaults to the current directory.
@@ -58,7 +58,7 @@ kitten <- function(name = "anRpackage",
         maintainer <- author
     if (missing(email))
         email <- if (haswhoami) whoami::email_address("your@email.com") else "your@email.com"
-    
+
     call <- match.call()                	# how were we called
     call[[1]] <- as.name("package.skeleton")    # run as if package.skeleton() was called
     env <- parent.frame(1)                      # access to what is in the environment
@@ -66,16 +66,16 @@ kitten <- function(name = "anRpackage",
     if (file.exists(file.path(path, name))) {
         stop("Directory '", name, "' already exists. Aborting.", call.=FALSE)
     }
-        
+
     assign("kitten.fake.fun", function() {}, envir = env)
-    
+
     call <- call[ c(1L, which(names(call) %in% names(formals(package.skeleton)))) ]
     call[["list"]] <- "kitten.fake.fun"
-    
+
     tryCatch(eval(call, envir = env), error = function(e){
         stop(sprintf("error while calling `package.skeleton` : %s", conditionMessage(e)))
     })
-    
+
     message("\nAdding pkgKitten overrides.")
 
     root <- file.path(path, name)    ## now pick things up from here
@@ -93,16 +93,23 @@ kitten <- function(name = "anRpackage",
         write.dcf(x, file = DESCRIPTION)
     }
 
+    dotgitignore <- system.file("skel", "R.gitignore", package="pkgKitten")
+    tgtgitignore <- file.path(root, ".gitignore")
+    if (!file.exists(".gitignore")) {
+        file.copy(dotgitignore, tgtgitignore, overwrite=TRUE)
+        cat("Copied .gitignore\n")
+    }
+
     playWithPerPackageHelpPage(name, path, maintainer, email)
-    
+
     rtgt <- file.path(root, "R", "hello.R")
     rsrc <- system.file("replacements", "hello.R", package="pkgKitten")
     file.copy(rsrc, rtgt, overwrite=TRUE)
-    
+
     rdtgt <- file.path(root, "man", "hello.Rd")
     rdsrc <- system.file("replacements", "hello.Rd", package="pkgKitten")
     file.copy(rdsrc, rdtgt, overwrite=TRUE)
-    
+
     rm("kitten.fake.fun", envir = env)
     unlink(file.path(root, "R"  , "kitten.fake.fun.R"))
     unlink(file.path(root, "man", "kitten.fake.fun.Rd"))
@@ -114,21 +121,21 @@ kitten <- function(name = "anRpackage",
     message("A good start is the 'Writing R Extensions' manual.\n")
 
     message("And run 'R CMD check'. Run it frequently. And think of those kittens.\n")
-    
+
     invisible(NULL)
 }
 
 ##' The \code{playWithPerPackageHelpPage} function creates an basic
 ##' package help page.
-##' 
+##'
 ##' The \code{playWithPerPackageHelpPage} function can be used to
 ##' create a simple help page for a package.
 ##'
 ##' It has been split off from the \code{kitten} function so that it
 ##' can be called from other packages. As such, it is also exported
-##' from \pkg{pkgKitten}. 
-##' 
-##' @title Create a very simple package help page 
+##' from \pkg{pkgKitten}.
+##'
+##' @title Create a very simple package help page
 ##' @param name The name of the package to be created, defaults to \dQuote{anPackage}
 ##' @param path The path to the location where the package is to be
 ##' created, defaults to the current directory.
@@ -142,7 +149,7 @@ playWithPerPackageHelpPage <- function(name = "anRpackage",
                                        path = ".",
                                        maintainer = "Your Name",
                                        email = "your@mail.com") {
-    root <- file.path(path, name)    
+    root <- file.path(path, name)
     helptgt <- file.path(root, "man", sprintf( "%s-package.Rd", name))
     helpsrc <- system.file("replacements", "manual-page-stub.Rd", package="pkgKitten")
     ## update the package description help page
