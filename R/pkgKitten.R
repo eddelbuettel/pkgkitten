@@ -95,9 +95,16 @@ kitten <- function(name = "anRpackage",
 
     dotgitignore <- system.file("skel", "R.gitignore", package="pkgKitten")
     tgtgitignore <- file.path(root, ".gitignore")
-    if (!file.exists(".gitignore")) {
+    if (!file.exists(tgtgitignore)) {
         file.copy(dotgitignore, tgtgitignore, overwrite=TRUE)
-        cat("Copied .gitignore\n")
+        message(" >> added .gitignore file")
+    }
+
+    dotRbuildignore <- system.file("skel", "dot.Rbuildignore", package="pkgKitten")
+    tgtRbuildignore <- file.path(root, ".Rbuildignore")
+    if (! file.exists(tgtRbuildignore)) {
+        file.copy(dotRbuildignore, tgtRbuildignore, overwrite=TRUE)
+        message(" >> added .Rbuildignore file")
     }
 
     playWithPerPackageHelpPage(name, path, maintainer, email)
