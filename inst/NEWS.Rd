@@ -6,15 +6,15 @@
 \section{Changes in version 0.1.5 (2017-10-xx)}{
   \itemize{
     \item More extensive use of newer R macros in package-default manual page.
-    \item Install \code{.Rbuildignore} and \code{.gitignore} files
-    \item Use the updated Travis run script
+    \item Install \code{.Rbuildignore} and \code{.gitignore} files.
+    \item Use the updated Travis run script.
   }
 }
 
 \section{Changes in version 0.1.4 (2016-11-13)}{
   \itemize{
     \item Utilize newer R macros in package-default manual page.
-    \item Repair a link to Wrting R Extensions (PR \ghpr{7} by Josh O'Brien)
+    \item Repair a link to Writing R Extensions (PR \ghpr{7} by Josh O'Brien).
   }
 }
 
@@ -40,12 +40,12 @@
   \itemize{
     \item New (exported) function \code{playWithPerPackageHelpPage()}
     which lets other packages create a non-complaint-generating package
-    help page
+    help page.
   } 
 }
 
 \section{Changes in version 0.1.0 (2014-06-13)}{
   \itemize{
-    \item Initial public version and CRAN upload
+    \item Initial public version and CRAN upload.
   } 
 }
