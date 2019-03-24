@@ -1,3 +1,11 @@
+2019-03-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add dependency badge
+
+2018-11-15  helix123  <kevintappe@gmx.de>
+
+	* NEWS.Rd: Correct several typos
+	
 2017-10-14  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/replacements/manual-page-stub.Rd: Shorter and simpler due to
@@ -6,7 +14,7 @@
 2017-10-13  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/pkgKitten.R (kitten): Copy in .Rbuildignore if none present
-	* inst/skel/dot.Rbuildignore: Aded
+	* inst/skel/dot.Rbuildignore: Added
 
 2017-10-12  Dirk Eddelbuettel  <edd@debian.org>
 
