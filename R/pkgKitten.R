@@ -143,7 +143,7 @@ kitten <- function(name = "anRpackage",
 ##' from \pkg{pkgKitten}.
 ##'
 ##' @title Create a very simple package help page
-##' @param name The name of the package to be created, defaults to \dQuote{anPackage}
+##' @param name The name of the package to be created, defaults to \dQuote{anRpackage}
 ##' @param path The path to the location where the package is to be
 ##' created, defaults to the current directory.
 ##' @param maintainer The name of the maintainer, defaults to
