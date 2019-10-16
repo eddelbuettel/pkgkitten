@@ -8,7 +8,7 @@ playWithPerPackageHelpPage(name = "anRpackage", path = ".",
   maintainer = "Your Name", email = "your@mail.com")
 }
 \arguments{
-\item{name}{The name of the package to be created, defaults to \dQuote{anPackage}}
+\item{name}{The name of the package to be created, defaults to \dQuote{anRpackage}}
 
 \item{path}{The path to the location where the package is to be
 created, defaults to the current directory.}
