@@ -1,3 +1,12 @@
+2019-10-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+2019-10-17  Andrew Coleman  <30481896+aecoleman@users.noreply.github.com>
+
+	* R/pkgKitten.R: Correct typo
+	* man/playWithPerPackageHelpPage.Rd: Ditto
+
 2019-03-24  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Add dependency badge
