@@ -3,3 +3,4 @@
 TODO
 orig
 .travis.yml
+^.*\.tar\.gz$

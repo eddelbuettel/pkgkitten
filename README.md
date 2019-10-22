@@ -6,7 +6,7 @@ Create packages that purr
 
 The base R function `package.skeleton()` is very useful for creating new
 packages for R. It is also very upsetting as it has been producing the same
-files which upset `R CMD check` in the exact same way.
+files which trigger `R CMD check` in the exact same way.
 
 And as something terrible happens each time `R CMD check` barks, this package
 offers a wrapper function `kitten()` which leaves an adorable little package

@@ -3,11 +3,14 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pkgkitten/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pkgkitten/issues/#1}{##1}}
 
-\section{Changes in version 0.1.5 (2017-10-xx)}{
+\section{Changes in version 0.1.5 (2019-10-22)}{
   \itemize{
     \item More extensive use of newer R macros in package-default manual page.
     \item Install \code{.Rbuildignore} and \code{.gitignore} files.
     \item Use the updated Travis run script.
+    \item Use more Rd macros in default 'stub' manual page (\ghpr{8}).
+    \item Several typos were fixed in README.md, NEWS.Rd and the manual page
+    (\ghpr{9}, \ghpr{10})
   }
 }
 
