@@ -6,6 +6,7 @@
 [![Dependencies](https://tinyverse.netlify.com/badge/pkgKitten)](https://cran.r-project.org/package=pkgKitten) 
 [![Debian package](https://img.shields.io/debian/v/r-cran-pkgkitten/sid?color=brightgreen)](https://packages.debian.org/sid/r-cran-pkgkitten)
 [![Downloads](http://cranlogs.r-pkg.org/badges/pkgKitten?color=brightgreen)](http://www.r-pkg.org/pkg/pkgKitten) 
+[![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/pkgkitten)](https://github.com/eddelbuettel/pkgkitten)
 
 ![a kitten](http://2.bp.blogspot.com/-rUsj-zdsAls/UY81UzuYHsI/AAAAAAAAAJA/QMiiNxYuvdI/s1600/burmilla-kitten.png)
 
