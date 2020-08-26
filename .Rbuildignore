@@ -2,5 +2,6 @@
 ^\.Rproj\.user$
 TODO
 orig
-.travis.yml
+\.travis.yml
 ^.*\.tar\.gz$
+\.github
