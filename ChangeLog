@@ -1,3 +1,7 @@
+2020-08-27  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/R.CMD.check.yaml: Renamed from main.yaml
+
 2020-08-25  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll minor version
