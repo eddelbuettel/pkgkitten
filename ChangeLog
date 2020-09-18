@@ -1,3 +1,10 @@
+2020-09-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml: Use updated run.sh with BSPM support
+	* .github/workflows/R.CMD.check.yaml: Idem
+
+	* README.md: Add 'Actions' badge
+
 2020-08-27  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/R.CMD.check.yaml: Renamed from main.yaml

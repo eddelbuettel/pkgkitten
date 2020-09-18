@@ -4,20 +4,17 @@ language: c
 sudo: required
 dist: bionic
 
-jobs:
-  include:
-    #- name: r-3.5
-    #  env: R_VERSION="3.5"
-    - name: r-4.0
-      env: R_VERSION="4.0"
-
+env:
+  global:
+    - USE_BSPM="true"
+    - _R_CHECK_FORCE_SUGGESTS_="false"
+      
 before_install:
   - curl -OLs https://eddelbuettel.github.io/r-travis/run.sh && chmod 0755 run.sh
   - ./run.sh bootstrap
 
 install:
-  - ./run.sh install_aptget r-cran-httr r-cran-jsonlite
-  - ./run.sh install_r whoami
+  - ./run.sh install_all
 
 script:
   - ./run.sh run_tests

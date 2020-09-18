@@ -1,6 +1,7 @@
 ## pkgKitten: Create packages that purr 
 
 [![Build Status](https://travis-ci.org/eddelbuettel/pkgkitten.svg)](https://travis-ci.org/eddelbuettel/pkgkitten) 
+[![R.CMD.check](https://github.com/eddelbuettel/pkgkitten/workflows/R.CMD.check/badge.svg)](https://github.com/eddelbuettel/pkgkitten/actions?query=workflow%3AR.CMD.check)
 [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
 [![CRAN](http://www.r-pkg.org/badges/version/pkgKitten)](https://cran.r-project.org/package=pkgKitten) 
 [![Dependencies](https://tinyverse.netlify.com/badge/pkgKitten)](https://cran.r-project.org/package=pkgKitten) 
