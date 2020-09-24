@@ -1,6 +1,7 @@
 2020-09-24  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .travis.yml (dist): Use focal for CI
+	* .github/workflows/R-CMD-check.yaml: Renamed with hyphens
 
 2020-09-18  Dirk Eddelbuettel  <edd@debian.org>
 
