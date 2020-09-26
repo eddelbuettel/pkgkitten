@@ -7,18 +7,19 @@ The `kitten` function creates an (almost) empty example package.
 ### Usage
 
     kitten(name = "anRpackage", path = ".", author, maintainer, email,
-      license = "GPL (>= 2)")
+      license = "GPL (>= 2)", puppy = TRUE)
 
 ### Arguments
 
-| Argument     | Description                                                                                     |
-| ------------ | ----------------------------------------------------------------------------------------------- |
-| `name`       | The name of the package to be created, defaults to “anPackage”                                  |
-| `path`       | The path to the location where the package is to be created, defaults to the current directory. |
-| `author`     | The name of the author, defaults to the result of `fullname`.                                   |
-| `maintainer` | The name of the maintainer, also defaults to `fullname` or `author` if the latter is given.     |
-| `email`      | The maintainer email address, defaults to `email_address`.                                      |
-| `license`    | The license of the new package, default to “GPL-2”.                                             |
+| Argument     | Description                                                                                                         |
+| ------------ | ------------------------------------------------------------------------------------------------------------------- |
+| `name`       | The name of the package to be created, defaults to “anPackage”                                                      |
+| `path`       | The path to the location where the package is to be created, defaults to the current directory.                     |
+| `author`     | The name of the author, defaults to the result of `fullname` (or “Your Name” as fallback).                          |
+| `maintainer` | The name of the maintainer, also defaults to `fullname` or `author` if the latter is given.                         |
+| `email`      | The maintainer email address, defaults to `email_address` (or “your@email.com” as fallback).                        |
+| `license`    | The license of the new package, defaults to “GPL-2”.                                                                |
+| `puppy`      | Toggle whether `tinytest::puppy` add unit testing, default to true (but conditional on `tinytest` being installed). |
 
 ### Details
 

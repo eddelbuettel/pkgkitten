@@ -9,6 +9,8 @@
     Travis and with GitHub Actions (Dirk in \ghpr{11} plus earlier commits).
     \item A new default \code{NAMESPACE} file is now installed (Dirk in \ghpr{12}).
     \item A package documentation website was added (Dirk in \ghpr{13}).
+    \item Call \code{tinytest::puppy} if installed and not opted out
+    (Dirk in \ghpr{14}). 
   }
 }
 

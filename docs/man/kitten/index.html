@@ -570,7 +570,7 @@
 <p>The <code>kitten</code> function creates an (almost) empty example package.</p>
 <h3 id="usage">Usage</h3>
 <div class="highlight"><pre><span></span><code>kitten(name = &quot;anRpackage&quot;, path = &quot;.&quot;, author, maintainer, email,
-  license = &quot;GPL (&gt;= 2)&quot;)
+  license = &quot;GPL (&gt;= 2)&quot;, puppy = TRUE)
 </code></pre></div>
 
 <h3 id="arguments">Arguments</h3>
@@ -592,7 +592,7 @@
 </tr>
 <tr>
 <td><code>author</code></td>
-<td>The name of the author, defaults to the result of <code>fullname</code>.</td>
+<td>The name of the author, defaults to the result of <code>fullname</code> (or “Your Name” as fallback).</td>
 </tr>
 <tr>
 <td><code>maintainer</code></td>
@@ -600,11 +600,15 @@
 </tr>
 <tr>
 <td><code>email</code></td>
-<td>The maintainer email address, defaults to <code>email_address</code>.</td>
+<td>The maintainer email address, defaults to <code>email_address</code> (or “your@email.com” as fallback).</td>
 </tr>
 <tr>
 <td><code>license</code></td>
-<td>The license of the new package, default to “GPL-2”.</td>
+<td>The license of the new package, defaults to “GPL-2”.</td>
+</tr>
+<tr>
+<td><code>puppy</code></td>
+<td>Toggle whether <code>tinytest::puppy</code> add unit testing, default to true (but conditional on <code>tinytest</code> being installed).</td>
 </tr>
 </tbody>
 </table>

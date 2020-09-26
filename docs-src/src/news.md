@@ -8,6 +8,12 @@
 -   A new default `NAMESPACE` file is now installed (Dirk in
     [\#12](https://github.com/eddelbuettel/pkgkitten/pull/12)).
 
+-   A package documentation website was added (Dirk in
+    [\#13](https://github.com/eddelbuettel/pkgkitten/pull/13)).
+
+-   Call `tinytest::puppy` if installed and not opted out (Dirk in
+    [\#14](https://github.com/eddelbuettel/pkgkitten/pull/14)).
+
 ### Version 0.1.5 (2019-10-22)
 
 -   More extensive use of newer R macros in package-default manual page.
