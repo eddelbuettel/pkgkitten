@@ -2,6 +2,10 @@
 
 	* DESCRIPTION (Version, Date): Roll minor version
 
+	* R/pkgKitten.R (kitten): Run tinytest::puppy unless opted opted out
+	* man/kitten.Rd: Document new option 'puppy'
+	* DESCRIPTION (Suggests): New suggested on 'tinytest'
+
 	* R/pkgKitten.R (kitten): Copy-in replacement NAMESPACE
 	* inst/replacements/NAMESPACE: Replacement NAMESPACE
 

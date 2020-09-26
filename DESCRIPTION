@@ -9,7 +9,8 @@ Description: Provides a function kitten() which creates cute little
  packages which pass R package checks. This sets it apart from 
  package.skeleton() which it calls, and which leaves imperfect files 
  behind. As this is not exactly helpful for beginners, kitten() offers 
- an alternative.
+ an alternative. Unit test support is added if the 'tinytest' package
+ is present.
 License: GPL (>= 2)
-Suggests: whoami (>= 1.1.0)
-
+Suggests: whoami (>= 1.1.0), tinytest
+RoxygenNote: 6.0.1

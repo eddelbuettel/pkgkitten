@@ -41,15 +41,18 @@
 ##' @param email The maintainer email address, defaults to
 ##' \code{\link[whoami]{email_address}} (or \dQuote{your@email.com} as fallback).
 ##' @param license The license of the new package, defaults to \dQuote{GPL-2}.
+##' @param puppy Toggle whether \code{tinytest::puppy} add unit testing, default
+##' to true (but conditional on \code{tinytest} being installed).
 ##' @return Nothing is returned as the function is invoked for its
 ##' side effect of creating a new package.
 ##' @author Dirk Eddelbuettel
 kitten <- function(name = "anRpackage",
                    path = ".",
-                   author, # = fullname(),         # from 'whoami', wasL "Your Name",
-                   maintainer, # = if (missing(author)) fullname() else author,
-                   email, # = email_address(),     # from 'whomai', was: "your@email.com",
-                   license = "GPL (>= 2)") {
+                   author,                         # or from 'whoami' if missing
+                   maintainer,                     # or from 'whoami' if missing
+                   email, # = email_address(),     # or from 'whomai' if missing
+                   license = "GPL (>= 2)", 	   # default choice
+                   puppy = TRUE) {                 # default choice add tinytest
 
     haswhoami <- requireNamespace("whoami", quietly=TRUE)
     if (missing(author))
@@ -132,6 +135,9 @@ kitten <- function(name = "anRpackage",
     message("A good start is the 'Writing R Extensions' manual.\n")
 
     message("And run 'R CMD check'. Run it frequently. And think of those kittens.\n")
+
+    if (puppy && requireNamespace("tinytest", quietly=TRUE))
+        tinytest::puppy(name)
 
     invisible(NULL)
 }
