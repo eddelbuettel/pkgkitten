@@ -117,6 +117,10 @@ kitten <- function(name = "anRpackage",
     rdsrc <- system.file("replacements", "hello.Rd", package="pkgKitten")
     file.copy(rdsrc, rdtgt, overwrite=TRUE)
 
+    rdtgt <- file.path(root, "NAMESPACE")
+    rdsrc <- system.file("replacements", "NAMESPACE", package="pkgKitten")
+    file.copy(rdsrc, rdtgt, overwrite=TRUE)
+
     rm("kitten.fake.fun", envir = env)
     unlink(file.path(root, "R"  , "kitten.fake.fun.R"))
     unlink(file.path(root, "man", "kitten.fake.fun.Rd"))
