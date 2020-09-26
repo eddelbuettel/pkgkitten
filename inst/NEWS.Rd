@@ -3,6 +3,14 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pkgkitten/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pkgkitten/issues/#1}{##1}}
 
+\section{Changes in version 0.1.6 (2020-xx-yy)}{
+  \itemize{
+    \item Continuous Integration uses the updated BSPM-based script on
+    Travis and with GitHub Actions (Dirk in \ghpr{11} plus earlier commits).
+    \item A new default \code{NAMESPACE} file is now installed (Dirk in \ghpr{12}).
+  }
+}
+
 \section{Changes in version 0.1.5 (2019-10-22)}{
   \itemize{
     \item More extensive use of newer R macros in package-default manual page.
