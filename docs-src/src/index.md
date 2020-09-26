@@ -8,7 +8,6 @@
 [![Debian package](https://img.shields.io/debian/v/r-cran-pkgkitten/sid?color=brightgreen)](https://packages.debian.org/sid/r-cran-pkgkitten)
 [![Downloads](http://cranlogs.r-pkg.org/badges/pkgKitten?color=brightgreen)](http://www.r-pkg.org/pkg/pkgKitten) 
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/pkgkitten)](https://github.com/eddelbuettel/pkgkitten)
-[![Documentation](https://img.shields.io/badge/documentation-is_here-blue)](https://eddelbuettel.github.io/drat/)
 
 ![a kitten](http://2.bp.blogspot.com/-rUsj-zdsAls/UY81UzuYHsI/AAAAAAAAAJA/QMiiNxYuvdI/s1600/burmilla-kitten.png)
 
@@ -30,11 +29,6 @@ via a standard
 ```r
 install.packages("pkgKitten")
 ```
-
-### Documentation
-
-Package documentation, help pages, and more is also available
-[here](https://eddelbuettel.github.io/pkgkitten/).
 
 ### Author
 

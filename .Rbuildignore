@@ -5,3 +5,5 @@ orig
 \.travis.yml
 ^.*\.tar\.gz$
 \.github
+^docs
+^docs-src

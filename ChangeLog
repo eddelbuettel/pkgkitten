@@ -5,6 +5,11 @@
 	* R/pkgKitten.R (kitten): Copy-in replacement NAMESPACE
 	* inst/replacements/NAMESPACE: Replacement NAMESPACE
 
+	* docs/: Added package website
+	* docs-src/: Added package website inputs
+
+	* README.md: Added badge and short sentence linking to documentation
+
 2020-09-25  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/R-CMD-check.yaml: Updated to matrix, simplified
