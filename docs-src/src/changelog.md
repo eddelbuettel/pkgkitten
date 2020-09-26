@@ -4,8 +4,17 @@
  
         * DESCRIPTION (Version, Date): Roll minor version 
  
+        * R/pkgKitten.R (kitten): Run tinytest::puppy unless opted opted out 
+        * man/kitten.Rd: Document new option 'puppy' 
+        * DESCRIPTION (Suggests): New suggested on 'tinytest' 
+ 
         * R/pkgKitten.R (kitten): Copy-in replacement NAMESPACE 
         * inst/replacements/NAMESPACE: Replacement NAMESPACE 
+ 
+        * docs/: Added package website 
+        * docs-src/: Added package website inputs 
+ 
+        * README.md: Added badge and short sentence linking to documentation 
  
 2020-09-25  Dirk Eddelbuettel  <edd@debian.org> 
  
