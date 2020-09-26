@@ -1,8 +1,7 @@
-# This is a basic workflow to help you get started with Actions
+# Basic workflow leaning on https://eddelbuettel.github.io/r-travis/
 
 name: R-CMD-check
 
-# Controls when the action will run. Triggers the workflow on push or pull request events
 on:
   push:
   pull_request:
@@ -11,29 +10,26 @@ env:
   USE_BSPM: "true"
   _R_CHECK_FORCE_SUGGESTS_: "false"
   
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config:
+          - {os: macOS-latest}
+          - {os: ubuntu-latest}
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    runs-on: ${{ matrix.config.os }}
+
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Prepare and bootstrap
-    - name: Prepare
-      run: |
-        curl -OLs https://eddelbuettel.github.io/r-travis/run.sh
-        chmod 0755 run.sh
-        ./run.sh bootstrap
-
-    # Install dependencies (with Suggests, use install_deps without)
-    - name: Dependencies
+    - name: download
+      run: curl -OLs https://eddelbuettel.github.io/r-travis/run.sh
+    - name: mode     
+      run: chmod 0755 run.sh
+    - name: bootstrap
+      run: ./run.sh bootstrap
+    - name: dependencies
       run: ./run.sh install_all
-
-    # Run test
-    - name: Test
+    - name: test
       run: ./run.sh run_tests
