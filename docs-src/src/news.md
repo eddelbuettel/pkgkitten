@@ -1,4 +1,4 @@
-### Version 0.1.6 (2020-xx-yy)
+### Version 0.2.0 (2020-09-27)
 
 -   Continuous Integration uses the updated BSPM-based script on Travis
     and with GitHub Actions (Dirk in
@@ -22,7 +22,7 @@
 
 -   Use the updated Travis run script.
 
--   Use more Rd macros in default \'stub\' manual page
+-   Use more Rd macros in default 'stub' manual page
     ([\#8](https://github.com/eddelbuettel/pkgkitten/pull/8)).
 
 -   Several typos were fixed in README.md, NEWS.Rd and the manual page
@@ -43,10 +43,8 @@
     are now updated such that they actually pass `R CMD check` on
     current versions of R.
 
--   If installed, the
-    [[whoami]{.pkg}](https://CRAN.R-project.org/package=whoami) package
-    (version 1.1.0 or later) is now used to discover the username and
-    email in the `DESCRIPTION` file.
+-   If installed, the `whoami` package (version 1.1.0 or later) is now
+    used to discover the username and email in the `DESCRIPTION` file.
 
 ### Version 0.1.2 (2014-09-11)
 

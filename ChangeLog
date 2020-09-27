@@ -1,8 +1,12 @@
+2020-09-27  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.2.0
+
 2020-09-26  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll minor version
 
-	* R/pkgKitten.R (kitten): Run tinytest::puppy unless opted opted out
+	* R/pkgKitten.R (kitten): Run tinytest::puppy unless opted out
 	* man/kitten.Rd: Document new option 'puppy'
 	* DESCRIPTION (Suggests): New suggested on 'tinytest'
 
