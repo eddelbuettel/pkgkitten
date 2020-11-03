@@ -1,5 +1,7 @@
 2020-11-02  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Version, Date): Roll minor version
+
 	* R/pkgKitten.R (kitten): Support new option 'bunny' to use roxygen2
 	* man/kitten.Rd: Documentation
 	* inst/replacements/hello2.R: Dummy file with roxygen docs
