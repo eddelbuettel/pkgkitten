@@ -5,7 +5,7 @@
 \title{Create a very simple package}
 \usage{
 kitten(name = "anRpackage", path = ".", author, maintainer, email,
-  license = "GPL (>= 2)", puppy = TRUE)
+  license = "GPL (>= 2)", puppy = TRUE, bunny = TRUE)
 }
 \arguments{
 \item{name}{The name of the package to be created, defaults to \dQuote{anPackage}}
@@ -26,6 +26,10 @@ created, defaults to the current directory.}
 
 \item{puppy}{Toggle whether \code{tinytest::puppy} add unit testing, default
 to true (but conditional on \code{tinytest} being installed).}
+
+\item{bunny}{Toggle whether \code{roxygen2} should be used for the
+the creation of Rd files from R, default is true (but also conditional on
+\code{roxygen2} being install).}
 }
 \value{
 Nothing is returned as the function is invoked for its

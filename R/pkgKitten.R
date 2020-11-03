@@ -1,6 +1,6 @@
 ##  pkgKitten -- A saner way to create packages to build upon
 ##
-##  Copyright (C) 2014 - 2017  Dirk Eddelbuettel <edd@debian.org>
+##  Copyright (C) 2014 - 2020  Dirk Eddelbuettel <edd@debian.org>
 ##
 ##  This file is part of pkgKitten
 ##
@@ -43,6 +43,9 @@
 ##' @param license The license of the new package, defaults to \dQuote{GPL-2}.
 ##' @param puppy Toggle whether \code{tinytest::puppy} add unit testing, default
 ##' to true (but conditional on \code{tinytest} being installed).
+##' @param bunny Toggle whether \code{roxygen2} should be used for the
+##' the creation of Rd files from R, default is true (but also conditional on
+##' \code{roxygen2} being install).
 ##' @return Nothing is returned as the function is invoked for its
 ##' side effect of creating a new package.
 ##' @author Dirk Eddelbuettel
@@ -52,9 +55,11 @@ kitten <- function(name = "anRpackage",
                    maintainer,                     # or from 'whoami' if missing
                    email, # = email_address(),     # or from 'whomai' if missing
                    license = "GPL (>= 2)", 	   # default choice
-                   puppy = TRUE) {                 # default choice add tinytest
+                   puppy = TRUE,                   # default choice add tinytest
+                   bunny = TRUE) {                 # default choice add roxygen2
 
     haswhoami <- requireNamespace("whoami", quietly=TRUE)
+    hasroxygen <- requireNamespace("roxygen2", quietly=TRUE)
     if (missing(author))
         author <- if (haswhoami) whoami::fullname("Your Name") else "Your Name"
     if (missing(maintainer))
@@ -120,13 +125,25 @@ kitten <- function(name = "anRpackage",
     rdsrc <- system.file("replacements", "hello.Rd", package="pkgKitten")
     file.copy(rdsrc, rdtgt, overwrite=TRUE)
 
+    rm("kitten.fake.fun", envir = env)
+    unlink(file.path(root, "R"  , "kitten.fake.fun.R"))
+    unlink(file.path(root, "man", "kitten.fake.fun.Rd"))
+
     rdtgt <- file.path(root, "NAMESPACE")
     rdsrc <- system.file("replacements", "NAMESPACE", package="pkgKitten")
     file.copy(rdsrc, rdtgt, overwrite=TRUE)
 
-    rm("kitten.fake.fun", envir = env)
-    unlink(file.path(root, "R"  , "kitten.fake.fun.R"))
-    unlink(file.path(root, "man", "kitten.fake.fun.Rd"))
+    if (hasroxygen && bunny) {
+        rtgt <- file.path(root, "R", "hello2.R")
+        rsrc <- system.file("replacements", "hello2.R", package="pkgKitten")
+        file.copy(rsrc, rtgt, overwrite=TRUE)
+        cwd <- getwd()
+        setwd(root)
+        cat("Encoding: UTF-8\n", file="DESCRIPTION", append=TRUE)
+        roxygen2::roxygenize(".")
+        setwd(cwd)
+    }
+
     unlink(file.path(root, "Read-and-delete-me"))
     message("Deleted 'Read-and-delete-me'.")
     message("Done.\n")
