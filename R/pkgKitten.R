@@ -133,6 +133,11 @@ kitten <- function(name = "anRpackage",
     rdsrc <- system.file("replacements", "NAMESPACE", package="pkgKitten")
     file.copy(rdsrc, rdtgt, overwrite=TRUE)
 
+    if (puppy && requireNamespace("tinytest", quietly=TRUE)) {
+        message(" >> added tinytest support")
+        tinytest::setup_tinytest(name, verbose=FALSE)
+    }
+
     if (hasroxygen && bunny) {
         rtgt <- file.path(root, "R", "hello2.R")
         rsrc <- system.file("replacements", "hello2.R", package="pkgKitten")
@@ -152,9 +157,6 @@ kitten <- function(name = "anRpackage",
     message("A good start is the 'Writing R Extensions' manual.\n")
 
     message("And run 'R CMD check'. Run it frequently. And think of those kittens.\n")
-
-    if (puppy && requireNamespace("tinytest", quietly=TRUE))
-        tinytest::puppy(name)
 
     invisible(NULL)
 }

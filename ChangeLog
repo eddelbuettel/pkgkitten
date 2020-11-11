@@ -1,3 +1,7 @@
+2020-11-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pkgKitten.R (kitten): Call setup_tinytest() instead of puppy
+
 2020-11-02  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll minor version
