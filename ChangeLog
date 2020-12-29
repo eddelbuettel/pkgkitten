@@ -1,3 +1,7 @@
+2020-12-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml: Renamed from R-CMD-check.yaml and updated
+
 2020-11-11  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/pkgKitten.R (kitten): Call setup_tinytest() instead of puppy
