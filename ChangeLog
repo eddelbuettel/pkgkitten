@@ -1,6 +1,7 @@
 2020-12-29  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: Renamed from R-CMD-check.yaml and updated
+	* README.md: Updated badge
 
 2020-11-11  Dirk Eddelbuettel  <edd@debian.org>
 
