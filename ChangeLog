@@ -2,6 +2,8 @@
 
 	* DESCRIPTION (Suggests): Also suggest roxygen2
 
+	* inst/replacements/hello2.R: Update example to hello2
+
 2020-12-29  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: Renamed from R-CMD-check.yaml and updated

@@ -4,8 +4,8 @@
 ##' tradition, it defaults to displaying \emph{hello, world}.
 ##' @return Nothing is returned but as a side effect output is printed
 ##' @examples
-##'   hello()
-##'   hello("and goodbye")
+##' hello2()
+##' hello2("and goodbye")
 ##' @export
 hello2 <- function(txt = "world") {
     cat("Hello, ", txt, "\n")
