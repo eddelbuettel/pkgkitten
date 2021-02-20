@@ -12,5 +12,5 @@ Description: Provides a function kitten() which creates cute little
  an alternative. Unit test support is added if the 'tinytest' package
  is present.
 License: GPL (>= 2)
-Suggests: whoami (>= 1.1.0), tinytest
+Suggests: whoami (>= 1.1.0), tinytest, roxygen2
 RoxygenNote: 6.0.1
