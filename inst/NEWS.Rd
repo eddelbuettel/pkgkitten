@@ -3,6 +3,15 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pkgkitten/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pkgkitten/issues/#1}{##1}}
 
+\section{Changes in version 0.2.1 (2021-02-22)}{
+  \itemize{
+    \item A small documentation error was corrected (David Dalpiaz in
+    \ghpr{15}).
+    \item A new option \sQuote{bunny} adds support for \pkg{roxygen2}.
+    \item Continuous integration now use \code{run.sh} from \pkg{r-ci}.
+  }
+}
+
 \section{Changes in version 0.2.0 (2020-09-27)}{
   \itemize{
     \item Continuous Integration uses the updated BSPM-based script on
