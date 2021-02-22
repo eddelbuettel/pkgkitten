@@ -1,3 +1,12 @@
+### Version 0.2.1 (2021-02-22)
+
+-   A small documentation error was corrected (David Dalpiaz in
+    [\#15](https://github.com/eddelbuettel/pkgkitten/pull/15)).
+
+-   A new option 'bunny' adds support for `roxygen2`.
+
+-   Continuous integration now use `run.sh` from `r-ci`.
+
 ### Version 0.2.0 (2020-09-27)
 
 -   Continuous Integration uses the updated BSPM-based script on Travis

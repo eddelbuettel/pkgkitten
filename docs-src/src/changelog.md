@@ -1,5 +1,34 @@
+###  2021 
+
+2021-02-22  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * DESCRIPTION (Version, Date): Release 0.2.1 
+ 
+2021-02-20  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * DESCRIPTION (Suggests): Also suggest roxygen2 
+ 
+        * inst/replacements/hello2.R: Update example to hello2 
+ 
 ###  2020 
 
+2020-12-29  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * .github/workflows/ci.yaml: Renamed from R-CMD-check.yaml and updated 
+        * README.md: Updated badge 
+ 
+2020-11-11  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * R/pkgKitten.R (kitten): Call setup_tinytest() instead of puppy 
+ 
+2020-11-02  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * DESCRIPTION (Version, Date): Roll minor version 
+ 
+        * R/pkgKitten.R (kitten): Support new option 'bunny' to use roxygen2 
+        * man/kitten.Rd: Documentation 
+        * inst/replacements/hello2.R: Dummy file with roxygen docs 
+ 
 2020-09-27  Dirk Eddelbuettel  <edd@debian.org> 
  
         * DESCRIPTION (Version, Date): Release 0.2.0 
