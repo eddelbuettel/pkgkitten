@@ -618,7 +618,7 @@
 <p>The <code>kitten</code> function creates an (almost) empty example package.</p>
 <h3 id="usage">Usage</h3>
 <div class="highlight"><pre><span></span><code>kitten(name = &quot;anRpackage&quot;, path = &quot;.&quot;, author, maintainer, email,
-  license = &quot;GPL (&gt;= 2)&quot;, puppy = TRUE)
+  license = &quot;GPL (&gt;= 2)&quot;, puppy = TRUE, bunny = TRUE)
 </code></pre></div>
 <h3 id="arguments">Arguments</h3>
 <table>
@@ -657,6 +657,10 @@
 <td><code>puppy</code></td>
 <td>Toggle whether <code>tinytest::puppy</code> add unit testing, default to true (but conditional on <code>tinytest</code> being installed).</td>
 </tr>
+<tr>
+<td><code>bunny</code></td>
+<td>Toggle whether <code>roxygen2</code> should be used for the the creation of Rd files from R, default is true (but also conditional on <code>roxygen2</code> being install).</td>
+</tr>
 </tbody>
 </table>
 <h3 id="details">Details</h3>
@@ -664,9 +668,9 @@
 created with the minimal number of files. What distinguished it from the
 function <code>package.skeleton()</code> in base R (which it actually calls) is
 that the resulting package passes <code>R CMD check cleanly</code>.</p>
-<p>Because every time you create a new package which does <em>not</em> pass <code>R CMD
-check</code>, a kitten experiences an existential trauma. Just think about the
-kittens.</p>
+<p>Because every time you create a new package which does <em>not</em> pass
+<code>R CMD check</code>, a kitten experiences an existential trauma. Just think
+about the kittens.</p>
 <h3 id="value">Value</h3>
 <p>Nothing is returned as the function is invoked for its side effect of
 creating a new package.</p>
