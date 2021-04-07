@@ -1,3 +1,7 @@
+2021-04-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (URL, BugRreports): Added to DESCRIPTION file
+
 2021-02-22  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.2.1
