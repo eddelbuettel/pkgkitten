@@ -1,3 +1,7 @@
+2021-07-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/replacements/hello2.R: Add function argument documentation
+
 2021-04-07  Dirk Eddelbuettel  <edd@debian.org>
 
 	* docs/mkdmt-src/: Moved mkdocs-material input
