@@ -3,6 +3,13 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pkgkitten/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pkgkitten/issues/#1}{##1}}
 
+\section{Changes in version 0.2.2 (2021-07-19)}{
+  \itemize{
+    \item Small update to DESCRIPTION
+    \item Document hello2() argument
+  }
+}
+
 \section{Changes in version 0.2.1 (2021-02-22)}{
   \itemize{
     \item A small documentation error was corrected (David Dalpiaz in

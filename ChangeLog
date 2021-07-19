@@ -1,3 +1,10 @@
+2021-07-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.2.2
+
+	* docs-src/: Updated for release 0.2.2
+	* docs/: Idem
+
 2021-07-18  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/replacements/hello2.R: Add function argument documentation
