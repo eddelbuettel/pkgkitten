@@ -1,8 +1,30 @@
 ###  2021 
 
+2021-07-19  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * DESCRIPTION (Version, Date): Release 0.2.2 
+ 
+        * docs-src/: Updated for release 0.2.2 
+        * docs/: Idem 
+ 
+2021-07-18  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * inst/replacements/hello2.R: Add function argument documentation 
+ 
+2021-04-07  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * docs/mkdmt-src/: Moved mkdocs-material input 
+ 
+2021-04-06  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * DESCRIPTION (URL, BugRreports): Added to DESCRIPTION file 
+ 
 2021-02-22  Dirk Eddelbuettel  <edd@debian.org> 
  
         * DESCRIPTION (Version, Date): Release 0.2.1 
+ 
+        * docs-src/: Updated for release 0.2.1 
+        * docs/: Idem 
  
 2021-02-20  Dirk Eddelbuettel  <edd@debian.org> 
  

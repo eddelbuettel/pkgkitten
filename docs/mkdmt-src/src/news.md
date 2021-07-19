@@ -1,3 +1,9 @@
+### Version 0.2.2 (2021-07-19)
+
+-   Small update to DESCRIPTION
+
+-   Document hello2() argument
+
 ### Version 0.2.1 (2021-02-22)
 
 -   A small documentation error was corrected (David Dalpiaz in
