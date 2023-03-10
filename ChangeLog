@@ -1,3 +1,7 @@
+2023-03-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pkgKitten.R (kitten): Reword Title, shorten default Description
+
 2022-11-08  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml (jobs): Update to actions/checkout@v3

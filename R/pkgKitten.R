@@ -93,11 +93,8 @@ kitten <- function(name = "anRpackage",
         x[, "Author"] <- author
         x[, "Maintainer"] <- sprintf("%s <%s>", maintainer, email)
         x[, "License"] <- license
-        x[, "Title"] <- "What the Package Does Using Title Case"
-        x[, "Description"] <- paste0("More details about what the package does. ",
-                                     "See <http://cran.r-project.org/doc/manuals/",
-                                     "r-release/R-exts.html#The-DESCRIPTION-file> for ",
-                                     "details on how to write this part.")
+        x[, "Title"] <- "Concise Summary of What the Package Does"
+        x[, "Description"] <- "More about what it does (maybe more than one line)."
         write.dcf(x, file = DESCRIPTION)
     }
 
