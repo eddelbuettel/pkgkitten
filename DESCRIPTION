@@ -1,8 +1,8 @@
 Package: pkgKitten
 Type: Package
 Title: Create Simple Packages Which Do not Upset R Package Checks
-Version: 0.2.2
-Date: 2021-07-19
+Version: 0.2.3
+Date: 2023-03-11
 Author: Dirk Eddelbuettel
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: Provides a function kitten() which creates cute little 
@@ -14,6 +14,6 @@ Description: Provides a function kitten() which creates cute little
  added via 'roxygen2' (if present).
 License: GPL (>= 2)
 Suggests: whoami (>= 1.1.0), tinytest, roxygen2
-URL: https://github.com/eddelbuettel/pkgkitten, https://dirk.eddelbuettel.com/code/pkgkitten.html
+URL: https://github.com/eddelbuettel/pkgkitten, https://eddelbuettel.github.io/pkgkitten/
 BugReports: https://github.com/eddelbuettel/pkgkitten/issues
 RoxygenNote: 6.0.1

@@ -3,6 +3,13 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pkgkitten/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pkgkitten/issues/#1}{##1}}
 
+\section{Changes in version 0.2.3 (2023-03-11)}{
+  \itemize{
+    \item Small improvement to generated Description: field and Title:
+    \item Maintenance for continuous integration setup
+  }
+}
+
 \section{Changes in version 0.2.2 (2021-07-19)}{
   \itemize{
     \item Small update to DESCRIPTION
