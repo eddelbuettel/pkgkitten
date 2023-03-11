@@ -1,10 +1,29 @@
+###  2023 
+
+2023-03-11  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * DESCRIPTION (Version, Date): Release 0.2.3 
+ 
+        * docs/mkdmt-src/: Updated for release 0.2.3 
+        * docs/: Idem 
+ 
+2023-03-10  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * R/pkgKitten.R (kitten): Reword Title, shorten default Description 
+ 
+###  2022 
+
+2022-11-08  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * .github/workflows/ci.yaml (jobs): Update to actions/checkout@v3 
+ 
 ###  2021 
 
 2021-07-19  Dirk Eddelbuettel  <edd@debian.org> 
  
         * DESCRIPTION (Version, Date): Release 0.2.2 
  
-        * docs-src/: Updated for release 0.2.2 
+        * docs/mkdmt-src/: Updated for release 0.2.2 
         * docs/: Idem 
  
 2021-07-18  Dirk Eddelbuettel  <edd@debian.org> 
