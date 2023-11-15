@@ -132,6 +132,11 @@ kitten <- function(name = "anRpackage",
 
     if (puppy && requireNamespace("tinytest", quietly=TRUE)) {
         tinytest::setup_tinytest(root, verbose=FALSE)
+        tinytgt <- file.path(root, "inst", "tinytest",
+                             paste0("test_", name, ".R"))
+        tinysrc <- system.file("replacements", "test_hello.R",
+                               package="pkgKitten")
+        file.copy(tinysrc, tinytgt, overwrite=TRUE)
         message(" >> added tinytest support")
     }
 
