@@ -1,3 +1,17 @@
+2023-11-15  Paul Hodor  <paul@aurynia.com>
+
+	* inst/replacements/test_hello.R: added a test file as a
+	replacement of the default created by setup_tinytest(); it has
+	added tests for the hello() function
+	* inst/replacements/hello.R: better formatting of the "hello" output
+	* R/pkgKitten.R: replace auto-generated test_<name>.R with content
+	of test_hello.R
+
+2023-11-15  Paul Hodor  <paul@aurynia.com>
+
+	* R/pkgKitten.R: fixed path in call to tinytest; fixed typo in doc
+	of kitten()
+
 2023-03-11  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.2.3
