@@ -1,3 +1,8 @@
+2023-11-15  Paul Hodor  <paul@aurynia.com>
+
+	* R/pkgKitten.R: fixed path in call to tinytest; fixed typo in doc
+	of kitten()
+
 2023-03-11  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.2.3
