@@ -3,7 +3,7 @@
 [![CI](https://github.com/eddelbuettel/pkgkitten/workflows/ci/badge.svg)](https://github.com/eddelbuettel/pkgkitten/actions?query=workflow%3Aci)
 [![License](https://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-2.0.html) 
 [![CRAN](https://www.r-pkg.org/badges/version/pkgKitten)](https://cran.r-project.org/package=pkgKitten) 
-[![Dependencies](https://tinyverse.netlify.com/badge/pkgKitten)](https://cran.r-project.org/package=pkgKitten) 
+[![Dependencies](https://tinyverse.netlify.app/badge/pkgKitten)](https://cran.r-project.org/package=pkgKitten) 
 [![Debian package](https://img.shields.io/debian/v/r-cran-pkgkitten/sid?color=brightgreen)](https://packages.debian.org/sid/r-cran-pkgkitten)
 [![Downloads](https://cranlogs.r-pkg.org/badges/pkgKitten?color=brightgreen)](https://www.r-pkg.org/pkg/pkgKitten) 
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/pkgkitten)](https://github.com/eddelbuettel/pkgkitten)
