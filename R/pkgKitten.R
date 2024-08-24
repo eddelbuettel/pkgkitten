@@ -89,12 +89,23 @@ kitten <- function(name = "anRpackage",
     root <- file.path(path, name)    ## now pick things up from here
     DESCRIPTION <- file.path(root, "DESCRIPTION")
     if (file.exists(DESCRIPTION)) {
-        x <- read.dcf(DESCRIPTION)
-        x[, "Author"] <- author
-        x[, "Maintainer"] <- sprintf("%s <%s>", maintainer, email)
+        x <- read.dcf(DESCRIPTION, fields = c("Package", "Type", "Title", "Version", "Date",
+                                              "Description", "License"))
+
+        ## add 'Authors@R'
+        x <- cbind(x, matrix("person", 1, 1, dimnames=list("", "Authors@R")))
+        #x[, "Author"] <- NULL #author
+        #x[, "Maintainer"] <- NULL #sprintf("%s <%s>", maintainer, email)
+        splitname <- strsplit(author, " ")[[1]]
+        x[1, "Authors@R"] <- sprintf(r"(person("%s", "%s", role = c("aut", "cre"), email = "%s"))",
+                                    paste(splitname[-length(splitname)], collapse=" "),
+                                    splitname[length(splitname)],
+                                    email)
+
         x[, "License"] <- license
         x[, "Title"] <- "Concise Summary of What the Package Does"
         x[, "Description"] <- "More about what it does (maybe more than one line)."
+
         write.dcf(x, file = DESCRIPTION)
     }
 

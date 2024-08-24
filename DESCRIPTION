@@ -1,8 +1,8 @@
 Package: pkgKitten
 Type: Package
 Title: Create Simple Packages Which Do not Upset R Package Checks
-Version: 0.2.3.1
-Date: 2023-11-15
+Version: 0.2.3.2
+Date: 2024-08-24
 Author: Dirk Eddelbuettel
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: Provides a function kitten() which creates cute little 
