@@ -94,8 +94,6 @@ kitten <- function(name = "anRpackage",
 
         ## add 'Authors@R'
         x <- cbind(x, matrix("person", 1, 1, dimnames=list("", "Authors@R")))
-        #x[, "Author"] <- NULL #author
-        #x[, "Maintainer"] <- NULL #sprintf("%s <%s>", maintainer, email)
         splitname <- strsplit(author, " ")[[1]]
         x[1, "Authors@R"] <- sprintf(r"(person("%s", "%s", role = c("aut", "cre"), email = "%s"))",
                                     paste(splitname[-length(splitname)], collapse=" "),
@@ -106,7 +104,10 @@ kitten <- function(name = "anRpackage",
         x[, "Title"] <- "Concise Summary of What the Package Does"
         x[, "Description"] <- "More about what it does (maybe more than one line)."
 
-        write.dcf(x, file = DESCRIPTION)
+        write.dcf(x[1, c("Package", "Type", "Title", "Version", "Date",
+                         "Authors@R", "Description", "License"),
+                    drop = FALSE],
+                  file = DESCRIPTION)
     }
 
     dotgitignore <- system.file("skel", "R.gitignore", package="pkgKitten")
