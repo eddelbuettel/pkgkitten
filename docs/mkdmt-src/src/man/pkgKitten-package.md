@@ -1,3 +1,5 @@
+
+
 ## Create simple packages using the `kitten` function.
 
 ### Description
@@ -16,3 +18,5 @@ Dirk Eddelbuettel wrote the package and maintains it.
 ### See Also
 
 `package.skeleton`, the ‘Writing R Extensions’ manual.
+
+

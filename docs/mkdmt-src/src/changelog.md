@@ -1,5 +1,54 @@
+###  2024 
+
+2024-08-30  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * DESCRIPTION (Version, Date): Release 0.2.4 
+ 
+        * DESCRIPTION (Authors@R): Added 
+ 
+2024-08-26  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * R/pkgKitten.R: Reorder fields in DESCRIPTION for 'Authors@R' 
+ 
+2024-08-24  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * DESCRIPTION (Version, Date): Roll micro version and date 
+ 
+        * R/pkgKitten.R: Fill in 'Authors@R', omit Author, Maintainer 
+ 
+2024-05-19  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * README.md: Use tinyverse.netlify.app for dependency badge 
+ 
+2024-02-16  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * .github/workflows/ci.yaml (jobs): Update to actions/checkout@v4, 
+        add r-ci-setup actions 
+ 
 ###  2023 
 
+2023-11-16  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * inst/skel/R.gitignore: Added C++ entries from gitignore GH repo 
+ 
+2023-11-15  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * DESCRIPTION (Version, Date): Roll micro version 
+ 
+2023-11-15  Paul Hodor  <paul@aurynia.com> 
+ 
+        * inst/replacements/test_hello.R: Added test file as replacement of 
+        setup_tinytest() default with added tests for the hello() function 
+        * inst/replacements/hello.R: better formatting of the "hello" output 
+        * R/pkgKitten.R: replace auto-generated test_<name>.R with content 
+        of test_hello.R 
+        * R/pkgKitten.R: fixed path in call to tinytest; fixed typo in doc 
+        of kitten() 
+ 
+2023-05-06  Dirk Eddelbuettel  <edd@debian.org> 
+ 
+        * inst/skel/dot.Rbuildignore: Add .github 
+ 
 2023-03-11  Dirk Eddelbuettel  <edd@debian.org> 
  
         * DESCRIPTION (Version, Date): Release 0.2.3 

@@ -1,4 +1,20 @@
 <div class="container">
+<div role="main">
+<h3 id="version-0.2.4-2024-08-30">Version 0.2.4 (2024-08-30)</h3>
+<ul>
+<li><p>The .Rbuildignore stanza now includes .github</p></li>
+<li><p>The support of and usage illustrations of <code>tinytest</code>
+are much enhanced (Paul Hudor in <a
+href="https://github.com/eddelbuettel/pkgkitten/pull/18">#18</a>
+adressing <a
+href="https://github.com/eddelbuettel/pkgkitten/issues/19">#19</a> and
+<a
+href="https://github.com/eddelbuettel/pkgkitten/issues/20">#20</a>)</p></li>
+<li><p>The .gitignore file now includes C++ related files</p></li>
+<li><p>Improvements and polish to badges and continuous
+integration</p></li>
+<li><p>The DESCRIPTION file now contains an Authors@R entry</p></li>
+</ul>
 <h3 id="version-0.2.3-2023-03-11">Version 0.2.3 (2023-03-11)</h3>
 <ul>
 <li><p>Small improvement to generated Description: field and
@@ -79,4 +95,5 @@ page.</p></li>
 <ul>
 <li><p>Initial public version and CRAN upload.</p></li>
 </ul>
+</div>
 </div>

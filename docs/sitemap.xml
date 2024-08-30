@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/eddelbuettel/pkgkitten/</loc>
-         <lastmod>2023-03-11</lastmod>
+         <lastmod>2024-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/eddelbuettel/pkgkitten/changelog/</loc>
-         <lastmod>2023-03-11</lastmod>
+         <lastmod>2024-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/eddelbuettel/pkgkitten/news/</loc>
-         <lastmod>2023-03-11</lastmod>
+         <lastmod>2024-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/eddelbuettel/pkgkitten/man/kitten/</loc>
-         <lastmod>2023-03-11</lastmod>
+         <lastmod>2024-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/eddelbuettel/pkgkitten/man/pkgKitten-package/</loc>
-         <lastmod>2023-03-11</lastmod>
+         <lastmod>2024-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/eddelbuettel/pkgkitten/man/playWithPerPackageHelpPage/</loc>
-         <lastmod>2023-03-11</lastmod>
+         <lastmod>2024-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

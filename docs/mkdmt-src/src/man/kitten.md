@@ -1,3 +1,5 @@
+
+
 ## Create a very simple package
 
 ### Description
@@ -6,12 +8,14 @@ The `kitten` function creates an (almost) empty example package.
 
 ### Usage
 
-    kitten(name = "anRpackage", path = ".", author, maintainer, email,
-      license = "GPL (>= 2)", puppy = TRUE, bunny = TRUE)
+``` R
+kitten(name = "anRpackage", path = ".", author, maintainer, email,
+  license = "GPL (>= 2)", puppy = TRUE, bunny = TRUE)
+```
 
 ### Arguments
 
-| Argument     | Description                                                                                                                                           |
+|              |                                                                                                                                                       |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name`       | The name of the package to be created, defaults to “anPackage”                                                                                        |
 | `path`       | The path to the location where the package is to be created, defaults to the current directory.                                                       |
@@ -41,3 +45,5 @@ creating a new package.
 ### Author(s)
 
 Dirk Eddelbuettel
+
+
