@@ -3,6 +3,17 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pkgkitten/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pkgkitten/issues/#1}{##1}}
 
+\section{Changes in version 0.2.4 (2024-08-30)}{
+  \itemize{
+    \item The .Rbuildignore stanza now includes .github
+    \item The support of and usage illustrations of \pkg{tinytest} are much
+    enhanced (Paul Hudor in \ghpr{18} adressing \ghit{19} and \ghit{20})
+    \item The .gitignore file now includes C++ related files
+    \item Improvements and polish to badges and continuous integration
+    \item The DESCRIPTION file now contains an Authors@R entry
+  }
+}
+
 \section{Changes in version 0.2.3 (2023-03-11)}{
   \itemize{
     \item Small improvement to generated Description: field and Title:

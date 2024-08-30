@@ -1,3 +1,13 @@
+2024-08-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.2.4
+
+	* DESCRIPTION (Authors@R): Added
+
+2024-08-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pkgKitten.R: Reorder fields in DESCRIPTION for 'Authors@R'
+
 2024-08-24  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll micro version and date

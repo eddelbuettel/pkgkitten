@@ -1,6 +1,6 @@
 ##  pkgKitten -- A saner way to create packages to build upon
 ##
-##  Copyright (C) 2014 - 2020  Dirk Eddelbuettel <edd@debian.org>
+##  Copyright (C) 2014 - 2024  Dirk Eddelbuettel <edd@debian.org>
 ##
 ##  This file is part of pkgKitten
 ##
