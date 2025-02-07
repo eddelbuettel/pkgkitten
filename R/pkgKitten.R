@@ -1,6 +1,6 @@
 ##  pkgKitten -- A saner way to create packages to build upon
 ##
-##  Copyright (C) 2014 - 2024  Dirk Eddelbuettel <edd@debian.org>
+##  Copyright (C) 2014 - 2025  Dirk Eddelbuettel <edd@debian.org>
 ##
 ##  This file is part of pkgKitten
 ##
@@ -40,6 +40,9 @@
 ##' \code{\link[whoami]{fullname}} or \code{author} if the latter is given.
 ##' @param email The maintainer email address, defaults to
 ##' \code{\link[whoami]{email_address}} (or \dQuote{your@email.com} as fallback).
+##' @param githubuser The maintainer github user, defaults to \code{NA_character_} 
+##' implying \dQuote{URL} and \dQuote{BugReports} fields are not being set. One can
+##' call \code{\link[whoami]{gh_username}} outside of continuous integration settings.
 ##' @param license The license of the new package, defaults to \dQuote{GPL-2}.
 ##' @param puppy Toggle whether \code{tinytest::puppy} add unit testing, default
 ##' to true (but conditional on \code{tinytest} being installed).
@@ -53,7 +56,8 @@ kitten <- function(name = "anRpackage",
                    path = ".",
                    author,                         # or from 'whoami' if missing
                    maintainer,                     # or from 'whoami' if missing
-                   email, # = email_address(),     # or from 'whomai' if missing
+                   email,                          # or from 'whomai' if missing
+                   githubuser = NA_character_,     # can use 'whoami::gh_username()' if not in CI
                    license = "GPL (>= 2)", 	   # default choice
                    puppy = TRUE,                   # default choice add tinytest
                    bunny = TRUE) {                 # default choice add roxygen2
@@ -92,7 +96,7 @@ kitten <- function(name = "anRpackage",
         x <- read.dcf(DESCRIPTION, fields = c("Package", "Type", "Title", "Version", "Date",
                                               "Description", "License"))
 
-        ## add 'Authors@R'
+        ## add 'Authors@R', then 'URL' and 'BugReports' if githubuser is non-NA
         x <- cbind(x, matrix("person", 1, 1, dimnames=list("", "Authors@R")))
         splitname <- strsplit(author, " ")[[1]]
         x[1, "Authors@R"] <- sprintf(r"(person("%s", "%s", role = c("aut", "cre"), email = "%s"))",
@@ -100,14 +104,26 @@ kitten <- function(name = "anRpackage",
                                     splitname[length(splitname)],
                                     email)
 
+        ## default outputs
+        fields_written <- c("Package", "Type", "Title", "Version", "Date", "Authors@R",
+                            "Description", "License")
+        
+        if (!is.na(githubuser)) {
+            x <- cbind(x, matrix("person", 1, 1, dimnames=list("", "URL")))
+            x[1, "URL"] <- paste0("https://github.com/", githubuser, "/", name)
+            x <- cbind(x, matrix("person", 1, 1, dimnames=list("", "BugReports")))
+            x[1, "BugReports"] <- paste0("https://github.com/", githubuser, "/", name, "/issues")
+
+            fields_written <- c("Package", "Type", "Title", "Version", "Date", "Authors@R",
+                                "Description", "URL", "BugReports", "License")
+        }
+        
         x[, "License"] <- license
         x[, "Title"] <- "Concise Summary of What the Package Does"
         x[, "Description"] <- "More about what it does (maybe more than one line)."
-
-        write.dcf(x[1, c("Package", "Type", "Title", "Version", "Date",
-                         "Authors@R", "Description", "License"),
-                    drop = FALSE],
-                  file = DESCRIPTION)
+        x[, "Version"] <- "0.0.1"
+        
+        write.dcf(x[1, fields_written, drop = FALSE], file = DESCRIPTION)
     }
 
     dotgitignore <- system.file("skel", "R.gitignore", package="pkgKitten")

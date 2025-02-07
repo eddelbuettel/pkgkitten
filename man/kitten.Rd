@@ -5,10 +5,11 @@
 \title{Create a very simple package}
 \usage{
 kitten(name = "anRpackage", path = ".", author, maintainer, email,
-  license = "GPL (>= 2)", puppy = TRUE, bunny = TRUE)
+  githubuser = NA_character_, license = "GPL (>= 2)", puppy = TRUE,
+  bunny = TRUE)
 }
 \arguments{
-\item{name}{The name of the package to be created, defaults to \dQuote{anPackage}}
+\item{name}{The name of the package to be created, defaults to \dQuote{anRpackage}}
 
 \item{path}{The path to the location where the package is to be
 created, defaults to the current directory.}
@@ -21,6 +22,10 @@ created, defaults to the current directory.}
 
 \item{email}{The maintainer email address, defaults to
 \code{\link[whoami]{email_address}} (or \dQuote{your@email.com} as fallback).}
+
+\item{githubuser}{The maintainer github user, defaults to \code{NA_character_} 
+implying \dQuote{URL} and \dQuote{BugReports} fields are not being set. One can
+call \code{\link[whoami]{gh_username}} outside of continuous integration settings.}
 
 \item{license}{The license of the new package, defaults to \dQuote{GPL-2}.}
 

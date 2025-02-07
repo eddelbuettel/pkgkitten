@@ -1,3 +1,9 @@
+2025-02-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/kitten.R (kitten): Support 'githubuser' option and add GitHub
+	URL and BugReports fields, also set Version: default to 0.0.1
+	* man/kitten.Rd: Updated
+
 2024-08-30  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.2.4
