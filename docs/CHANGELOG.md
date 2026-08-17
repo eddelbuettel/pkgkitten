@@ -1,3 +1,9 @@
+2026-08-17  Dirk Eddelbuettel  <edd@debian.org>
+
+        * docs/: Redone using 'altdoc' with 'material for mkdocs'
+        * .github/altdoc/*: Added supporting 'altdoc'
+        * .github/scripts/postprocess.sh: Idem
+
 2026-01-05  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: Switch to actions/checkout@v6

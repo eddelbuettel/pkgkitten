@@ -6,7 +6,7 @@ repo_url: $ALTDOC_PACKAGE_URL_GITHUB
 repo_name: $ALTDOC_PACKAGE_NAME
 
 ## Activate optional copyright in footer
-copyright: Copyright &copy; 2003-current Dirk Eddelbuettel
+copyright: Copyright &copy; 2014-current Dirk Eddelbuettel
 
 ## Theme (already default) and override
 theme:
