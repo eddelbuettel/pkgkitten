@@ -3,5 +3,4 @@
 .RData
 pkgKitten.Rproj
 pkgkitten.Rproj
-docs-src/docs
-docs/mkdmt-src/docs
+local/
